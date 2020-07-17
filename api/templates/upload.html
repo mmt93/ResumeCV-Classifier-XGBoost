@@ -1,0 +1,78 @@
+<!doctype html>
+<title>DEMO:: XGBoost + Cosine Similarity on slowest AWS server :(</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO::Resume analyses - XGBoost and Cosine similarity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div style="margin-bottom: 20px;">
+    <h1 class="title">FIND YOUR DREAM JOB</h1>
+    <h3 class="subtitle">Take a look on our 5 job positions, and see how your resume fits in.</h3>
+</div>
+<div class="box-resume">
+    <div class="resume">
+      <h3 class="resume-title">Accounting / Finance</h3>
+      <img src="static/img/acc-finance.jpg" alt="Accounting/Finance">
+    </div>
+
+    <div class="resume">
+      <h3 class="resume-title">Administration</h3>
+      <img src="static/img/adm.jpg" alt="Accounting/Finance">
+    </div>
+
+    <div class="resume">
+      <h3 class="resume-title">Investiment</h3>
+      <img src="static/img/investment.jpg" alt="Accounting/Finance">
+    </div>
+
+    <div class="resume">
+      <h3 class="resume-title">Legal</h3>
+      <img src="static/img/legal.jpg" alt="Accounting/Finance">
+    </div>
+
+
+    <div class="resume">
+      <h3 class="resume-title">Sales</h3>
+      <img src="static/img/sales.jpg" alt="Accounting/Finance">
+    </div>
+</div>
+
+<div class="box-upload">
+
+    <form method="post" class="form-upload" action="/" enctype="multipart/form-data">
+      <div class="file-upload-wrapper" data-text="">
+        <input name="file" type="file" class="file-upload-field" value="">
+      </div>
+      <button class="btn-upload" value="Submit" type="submit" onclick="return confirm('It is running on a lightsail AWS cloud(512MB + vCPU). So..Its gonna take awhile, please check my github for answers. Thanks!!')">Upload</button>      
+    </form>
+  </div>
+
+<div class="box-result" id="content">
+	<div class="row">
+		<br>
+		<strong><p id="log"></p></strong>
+	</div>
+</div>
+
+<div class="box-result">
+
+    <p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+      <ul class=flashes>
+        {% for message in messages %}
+        {% autoescape false %}
+        <strong><p>{{ message }}</p></strong>
+        {% endautoescape %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+      </p>
+  </div>
+</body>
