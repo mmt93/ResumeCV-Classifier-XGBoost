@@ -6,7 +6,7 @@ There are not much real resumes dataset, and all of this project was done by usi
 
 ## POC WORKFLOW
 Thinking about who have to find on databases or have just scanned tons of resumes/CV. Let's classify all your data, and as bonus, see how it fits in some jobs requeriments.
-  - First: Acess http://18.212.64.153/, it is running on cheapest AWS cloud machine. A lightsail 512RAM, 1vCPU.
+  - First: Acess http://52.87.98.116/, it is running on cheapest AWS cloud machine. A lightsail 512RAM, 1vCPU.
   - Then, upload a Administration/Bussiness, Legal, Sales, Accounting/Finance or Investment resume/CV.
   - Wait few minutes, and check what is your resume Area and Job Fitting result based on the job proposals listed @ homepage.
 
